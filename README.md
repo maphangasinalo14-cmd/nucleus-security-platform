@@ -1,70 +1,71 @@
-# Nucleus Security Platform
+Nucleus Security Platform
 
-![Nucleus Logo](docs/logo.png)  
+Nucleus is an enterprise-grade runtime security monitoring platform built on eBPF (Extended Berkeley Packet Filter) technology. It provides real-time threat detection at the kernel level with zero performance impact, giving security teams visibility into process execution across their infrastructure.
 
-**See every threat, miss nothing, impact nothing.**  
+Vision: "See every threat, miss nothing, impact nothing."
 
-Nucleus is an enterprise-grade runtime security monitoring platform built on **eBPF** (Extended Berkeley Packet Filter) technology. It provides **real-time threat detection at the kernel level** with minimal performance impact, giving security teams unprecedented visibility into process execution across their infrastructure.
+🚀 Features
 
----
+Kernel-level process monitoring using eBPF
 
-## 🚀 Features
+Real-time detection of common security threats (reverse shells, crypto miners, privilege escalation)
 
-### Core eBPF Agent
-- Real-time kernel-level process monitoring
-- MITRE ATT&CK technique mapping
-- Behavioral baseline learning
-- Multi-level risk scoring
-- Automated response playbooks
+Multi-level risk scoring and event correlation
 
-### API Server
-- WebSocket + REST API backend
-- Real-time event streaming
-- Historical query support
-- Host & threat analytics
+Baseline learning for improved accuracy and reduced false positives
 
-### Web Dashboard
-- Live event feed with filtering
-- Risk-based color coding
-- Process ancestry visualization
-- Threat intelligence display
+JSON-based event logging for integration with SIEM tools
 
-### Documentation Suite
-- Production Deployment Guide
-- Threat Model & Security Analysis
-- Attack Surface Analysis
-- eBPF Safety Guarantees
-- False Positive Analysis Framework
-
----Nucleus-Security-Platform/
-│
-├─ nucleus/ # Core Python & C code
-│ ├─ nucleus.py
-│ └─ ebpf_program.c
-│
-├─ api_server/ # Backend API
-│ ├─ nucleus_api_server.py
-│ └─ requirements.txt
-│
-├─ dashboard/ # Frontend mockup
-│ ├─ src/
-│ └─ package.json
-│
-├─ docs/ # Documentation & screenshots
-│ └─ README.md
-│
-├─ docker/ # Optional deployment configs
-│ └─ Dockerfile
-│
-├─ .gitignore
-└─ README.md
+🗂️ Repository Contents
+nucleus/
+├─ nucleus.py        # Core eBPF agent
+├─ README.md         # Project overview and instructions
+├─ .gitignore        # Standard Git ignore patterns
 
 
----
+Additional components like API servers, dashboards, and documentation can be added later to simulate a full-stack product.
 
-## ⚙️ Installation & Usage
+💻 Getting Started
+Prerequisites
 
-> This project is portfolio-ready. Scripts are mock-ready but demonstrate architecture and functionality.
+Python 3.10+
 
-### Run the Core Agent
-```bash
+Linux environment (required for eBPF)
+
+Required packages:
+
+pip install bcc asyncio
+
+Running the Core Agent
+python nucleus.py
+
+
+Runs the eBPF monitoring agent
+
+Outputs JSON-formatted events to console
+
+Note: This is a standalone implementation for demonstration purposes.
+
+🛡️ Security Coverage (Demo)
+
+The agent can detect or flag:
+
+Reverse shell execution (bash, Python, nc)
+
+Cryptocurrency mining activity
+
+Privilege escalation attempts
+
+Credential dumping and network scanning
+
+📈 Portfolio Notes
+
+This project demonstrates full-stack thinking for a security product, even though only the core agent is implemented.
+
+Ideal for showcasing kernel-level monitoring, event correlation, and eBPF usage in interviews or portfolios.
+
+Can be expanded into a full-stack solution with API servers, dashboards, and deployment guides in the future.
+
+📄 License
+
+MIT License – Free to use for personal and portfolio purposes.
